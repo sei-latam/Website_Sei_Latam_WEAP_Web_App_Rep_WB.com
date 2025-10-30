@@ -101,6 +101,32 @@
                   <li>Interoperabilidad y administración: Al igual que en las BDE, se optó por estructurar inicialmente la información en archivos y extensiones comunes como shapefile (.shp), hojas de cálculo de Excel (.xlsx), archivos de texto plano (.txt), entre otros. </li>
             </ul>
 
+
+          <div class="flex-row">   
+          <p class="text text-center graph-title">
+              Unión de la información temporal y espacial.
+            </p>
+                <p class="text" style="text-align: justify;">
+                 La unión de la información temporal (series de tiempo) y espacial (área de estudio), se realizó mediante la aplicación de Sistemas de Información Geográfica (SIG) específicamente el software licenciado ArcGIS, utilizando la herramienta ‘spatial join’ para cada una de las cinco variables definidas en el proyecto, obteniendo de esta forma archivos (.shp) y una primera estructuración de los datos.  
+                </p>
+
+            <p class="text text-center graph-title">
+              Creación de imágenes multibanda.
+            </p>
+                <p class="text" style="text-align: justify;">
+                 En una primera instancia, se optó por realizar la exportación de los archivos (.shp) en la plataforma de la nube Google Earth Engine (GEE). Sin embargo, debido a limitaciones establecidas en GEE referentes al tamaño (hasta 2 GB), numero de columnas (hasta 1000) número máximo de vértices por geometría (hasta 100.000 vértices), fue decidido convertir los archivos (.shp) a imágenes multibanda tipo ráster (.tiff o. geotiff) que ocuparan menor espacio y tuvieran una mayor eficiencia en el desarrollo de la aplicación en GEE. De esta forma, se logró importar de forma exitosa las cinco variables que contenían mediciones mensuales de las series temporales entre 1980 a 2020, en donde cada mes de las series fueron remplazadas y enumeradas como bandas ‘b1, b2, b3…. b492’ en las imágenes multibanda.
+                </p>
+
+             <p class="text text-center graph-title">
+              Creación de image collections mensuales y anuales.
+            </p>
+                <p class="text" style="text-align: justify;">
+                 Una vez importadas las imágenes multibanda en GEE, el siguiente paso fue convertir cada una de las imágenes multibanda a estructuras propias de GEE (FeatureCollection, ImageCollection, List, Arrays, etc). En este caso, la estructura escogida fue ImageCollection debido a su capacidad de almacenar y organizar imágenes ráster para diferentes periodos de tiempo (en este caso mensual). Asimismo, es importante mencionar que para el caso de las ImageCollections mensuales, se procedió a renombrar todas las bandas de acuerdo con la variable que pertenece ‘temperatura’, ‘precipitación’, ‘escorrentía’, ‘evapotranspiración’, entre otras. 
+                </p>
+                <p class="text" style="text-align: justify;">
+                 Una vez creadas las ImageCollections mensuales, se crearon ImageCollections anuales tomando en cuenta las siguientes consideraciones por variable: En la variable de temperatura, se calculó la media anual en unidades Celsius (°). Mientras que, para las variables de precipitación, escorrentía, evapotranspiración potencial y real, fueron calculadas las acumulaciones o sumatorias anuales en unidades de milímetros (mm).
+                </p>
+            
         <!-------------------------------------------------------------------------------------------->
         <!--Start Credits-->
         <div class="flex-row">
