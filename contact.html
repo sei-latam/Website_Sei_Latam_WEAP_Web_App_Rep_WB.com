@@ -1,0 +1,275 @@
+<!doctype html>
+<html>
+
+<head>
+  <title> Introducción </title>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/footer.js"></script>
+  <style>
+    .menu-summary {
+      color: rgb(255, 255, 255) !important;
+      opacity: 1 !important;
+      font-weight: 700 !important;
+    }
+  </style>
+</head>
+  
+<body>
+  <div class="menu-container"></div>
+  <div class="content-container">
+    <!-------------------------------------------------------------------------------------------->
+    <!--Start Header-->
+    <div class="banner" style="background: url('img/WallpaperWBPage.png') no-repeat center; background-size: cover; height: 850px;"></div>
+    <div class="banner">
+      <div class="banner-table flex-column" style="background-color: rgba(0, 0, 0, 0.5);">
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <h1 class="add-top-margin-small">Documentación técnica de la Aplicación Web</h1>
+            <h3 class="add-top-margin-small">Protocolos y procesos de desarrollo para acceder a los datos del balance hídrico superficial de Bolivia</h3>
+            <p class="text">
+              Publicación oficial del estudio: <a href="https://zenodo.org/records/10850934">(link zenodo)</a> 2024
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+        <!--End Header-->
+        <!-------------------------------------------------------------------------------------------->
+        <div class="content">
+        <div class="content-table flex-column">
+        <!-------------------------------------------------------------------------------------------->
+        <!--Start Introduction-->
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <h2 id="Introduction">Resumen General</h2>
+            <hr>
+            <p class="text" style="text-align: justify;">
+              El proyecto "Development Protocols and Processes for Accessing Data from the Bolivia Surface Water Balance" ejecutado para el Banco Mundial (BM) por parte del Stockholm Environment Institute (SEI), representa un avance significativo en la difusión de información para la gestión de recursos hídricos en Bolivia. Este esfuerzo culmina en la creación de protocolos y procesos estandarizados para acceder y utilizar los datos del Balance Hídrico Superficial de Bolivia (BHSB), un estudio integral que describe las condiciones climáticas e hidrológicas del territorio nacional desde 1980 hasta 2020 (Ayala et al., 2023). El BHSB, desarrollado mediante el modelo Water Evaluation and Planning System (WEAP), abarca una base de datos espacialmente homogénea que cubre tres macrorregiones hidrográficas principales: la cuenca del Amazonas (con 720,792 km² de aporte boliviano, equivalente al 11.73% de la región total), la región endorreica (151,722 km², o 46.53% de la región, incluyendo cuerpos de agua como el Lago Titicaca y el Salar de Uyuni) y la cuenca del Plata (225,492 km², o 5.45% de la región) (Ayala et al., 2023; Lehner & Grill, 2013). Esta base de datos incorpora variables climáticas clave, como precipitación, temperatura y evaporación, procesadas a través de herramientas como la Gridded Meteorological Ensemble Tool (GMET) y calibradas con datos de 260 estaciones de monitoreo del Servicio Nacional de Meteorología e Hidrología (SENAMHI), aunque con una cobertura reducida en comparación con estudios previos de los años 90 que utilizaban hasta 550 estaciones (SENAMHI, 2023; Ortloff & Kolata, 1989). Además, integra información biofísica detallada, incluyendo combinaciones de tipos de suelo, usos de la tierra y pendientes, representadas en 269 cuencas subdivididas (92 calibradas con puntos hidrométricos y 177 para planificación nacional por el Ministerio de Medio Ambiente y Agua - MMAyA), lo que permite una modelación precisa de la escorrentía, infiltración y otros procesos hidrológicos con métricas de calibración como el Nash-Sutcliffe Efficiency (NSE) (Yates et al., 2005)
+            </p>
+            <p class="text" style="text-align: justify;">
+              Frente a los desafíos de accesibilidad limitada de estos datos, exacerbados por la disminución en la red de monitoreo climático (que opera al 50% de su capacidad máxima desde los años 2000, ver antecedentes del producto 1 del proyecto) y la concentración de estaciones en zonas urbanas, el proyecto enfatiza la integración con plataformas digitales para democratizar el acceso (SENAMHI, 2023). En particular, se desarrollan procedimientos para la visualización de la data mediante Google Earth Engine (GEE), una plataforma de análisis geoespacial en la nube que permite procesar y mapear grandes volúmenes de datos satelitales y modelados en tiempo real (Gorelick et al., 2017). Estos procedimientos incluyen la carga de datasets del BHSB en formato raster o vectorial (por ejemplo, capas de Unidades de Respuesta Hidrológica - UHR ajustadas), la aplicación de scripts en JavaScript para generar visualizaciones interactivas de variables como precipitación y escorrentía, y la integración con herramientas de mapeo en línea del Banco Mundial para superponer capas temáticas sobre mapas base (World Bank, 2024). De esta manera, usuarios como agencias gubernamentales, investigadores y el sector privado pueden explorar tendencias hidrológicas a escalas local, regional y nacional (la escala espacial del proyecto es de 10 X 10 km2), facilitando la planificación de infraestructura hidráulica, la mitigación de conflictos hidro-sociales y el desarrollo sostenible en áreas rurales con escasez de datos monitoreados (MMAyA, 2009).
+            </p>
+            <p class="text" style="text-align: justify;">
+              Las secciones subsiguientes de este documento detallan los protocolos de extracción y procesamiento de datos del modelo WEAP ajustado, así como guías paso a paso para la implementación de visualizaciones en GEE, asegurando que la base de datos del BHSB no solo sea descriptiva, sino operativa para informar decisiones estratégicas en el contexto de planes sectoriales relacionados con los recursos hídricos y naturales, así como del Plan de Desarrollo Económico y Social (PDES) del país.
+            </p>
+          </div>
+        </div>
+        <!--End Introduction-->
+        <!--------------------------------------------------------------------------------------------> 
+        <!--Start Intro-->
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <img class="image" src="img/SeiLogo.png">
+          </div>
+          <div class="flex-item flex-column">
+              <h2>STIFTELSEN THE STOCKHOLM ENVIRONMENT INSTITUTE (SEI)</h2>
+            <hr>
+              <h3>SEI Latinoamérica </h3>
+            <hr>
+                  <ul>
+                  <li>Gustavo Ayala, Investigador Asociado </li>
+                  <li>Sebastián Palomino, Investigador Asociado </li>
+                  <li>Carlos Méndez, Investigador Asociado </li>
+                  </ul>
+          </div>
+        </div>
+        <!--End Intro-->
+        <!-------------------------------------------------------------------------------------------->
+        <!-------------------------------------------------------------------------------------------->
+       
+        <div class="flex-row-space-between">
+          <div class="flex-item flex-column">
+            <p class="text badge-text">Large Badge Caption!</p>
+          </div>
+          <div class="flex-item flex-column">
+            <div class="control-group">
+            </div>
+          </div>
+        </div>
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+          </div>
+        </div>
+        <!--End Text with Buttons-->
+        <!-------------------------------------------------------------------------------------------->
+        <!--Start Text with Images and Image buttons-->
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <h2 id="images-and-image-button">Images and Image Button</h2>
+            <hr>
+            <p class="text">
+              xxxx
+            </p>
+          </div>
+        </div>
+        <div class="flex-row-space-between">
+        </div>
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <p class="text">
+              xxxx
+            </p>
+          </div>
+        </div>
+        <!--End Text with Images and Image buttons-->
+        <!-------------------------------------------------------------------------------------------->
+        <!--Start Text around Image-->
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <h2 id="text-around-image">Text around Image</h2>
+            <hr>
+            <p class="text">
+              <img class="image image-wrap-text max-width-400" src="img/dummay-img.png">
+              xxxx
+            </p>
+          </div>
+        </div>
+        <!--End Text around Image-->
+        <!-------------------------------------------------------------------------------------------->
+      </div>
+    </div>
+    <div class="banner" style="background: url('') no-repeat center; background-size: cover; height: 500px;">
+      <div class="banner-table flex-column" style="background-color: rgba(0, 0, 0, 0.5);">
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <h2 class="add-top-margin-small">This is the banner area with photo</h2>
+            <p class="text">
+              xxxx <a href="javascript:void(0)">xxx</a>. xxxx
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="content-table flex-column">
+        <!-------------------------------------------------------------------------------------------->
+        <!--Start Text with Centered Image and Table-->
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <h2 id="centered-image-and-table" class="no-top-margin">Centered Image and Table</h2>
+            <hr>
+            <p class="text">
+              xxxxx
+            </p>
+            <p class="text text-center graph-title">
+              This image does not scroll and only scale.
+            </p>
+            <img class="image center max-width-400 add-top-margin-small" src="img/dummay-img.png">
+            <p class="text text-center graph-title">
+              This image scrolls on mobile with a fixed height.
+            </p>
+            <div class="scrollable-image-container center add-top-margin-small">
+              <img class="scrollable-image center" src="img/dummay-img.png">
+            </div>
+            <p class="text">
+              xxx
+            </p>
+            <p class="text text-center graph-title">
+              This is the title for the bottom scrollable table.
+            </p>
+            <div class="custom-table-container center add-top-margin-small">
+              <table class="custom-table">
+                <thead>
+                </thead>
+                <tbody>
+                </tbody>
+                <tfoot>
+                </tfoot>
+              </table>
+            </div>
+            <p class="text text-center graph-title">
+              This is the title for the bottom very long scrollable table.
+            </p>
+            <div class="custom-table-container center add-top-margin-small">
+              <table class="custom-table">
+                <thead>
+                </thead>
+                <tbody>
+                </tbody>
+                <tfoot>
+                </tfoot>
+              </table>
+            </div>
+            <p class="text">
+              xxxxx
+            </p>
+          </div>
+        </div>
+        <!--End Text with Centered Image and Table-->
+        <!-------------------------------------------------------------------------------------------->
+        <!-------------------------------------------------------------------------------------------->
+      </div>
+    </div>
+    <div class="banner" style="background: url('img/dummy-background.jpeg') no-repeat center; background-size: cover; height: 500px;"></div>
+    <div class="banner">
+      <div class="banner-table flex-column">
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <h2 class="add-top-margin-small">This is the two banner area with photo</h2>
+            <p class="text">
+              xxxx
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="content-table flex-column">
+        <!-------------------------------------------------------------------------------------------->
+    
+        <!-------------------------------------------------------------------------------------------->
+<!--Start Text with Iframe-->
+<div class="flex-row">
+  <div class="flex-item flex-column">
+    <h2 id="iframe">Iframe</h2>
+    <hr>
+    <p class="text">
+      xxxx
+    </p>
+    <iframe
+      class="iframe-in-body"
+      src="https://ee-carlosmendez.projects.earthengine.app/view/hruwatersei"
+      width="1200"
+      height="800"
+      style="border: none;">
+    </iframe>
+    <p class="text">
+      xxxxx
+    </p>
+  </div>
+</div>
+<style>
+  .iframe-in-body {
+    max-width: 1200%;
+    height: 800px;
+    border: none;
+  }
+</style>
+<!--END Text with Iframe-->
+        <!-------------------------------------------------------------------------------------------->
+        <!--Start Credits-->
+        <div class="flex-row">
+          <div class="flex-item flex-item-stretch flex-column">
+            <p class="text text-small text-italic add-top-margin-large">
+              Credits: <span class="highlight-text">Organization One</span>: Author One and Author Two / <span class="highlight-text">Organization Two</span>: Author Three and Author Four
+            </p>
+          </div>
+        </div>
+        <!--End Credits-->
+        <!-------------------------------------------------------------------------------------------->
+      </div>
+    </div>
+    <div class="footer-container"></div>
+  </div>
+</body>
+
+</html>
