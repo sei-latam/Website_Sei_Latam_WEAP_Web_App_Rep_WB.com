@@ -76,17 +76,28 @@
         <!--Start Text with Centered Image and Table-->
         <div class="flex-row">
           <div class="flex-item flex-column">
-            <h2 id="centered-image-and-table" class="no-top-margin">Centered Image and Table</h2>
+            <h2 id="centered-image-and-table" class="no-top-margin">Estructuración de las bases de datos/variables </h2>
             <hr>
             <p class="text text-center graph-title">
-              This image scrolls on mobile with a fixed height.
+              Definición de la base de datos.
             </p>
             <div class="scrollable-image-container center add-top-margin-small">
               <img class="scrollable-image center" src="img/dummay-img.png">
             </div>
-            <p class="text">
-              xxx
+            <p class="text" style="text-align: justify;">
+              El desarrollo de la base de datos del proyecto, considera una serie de variables hidrológicas claves reportadas en el modelo WEAP ajustado a nivel de UHR, para representar de manera interactiva y espacial las dinámicas de los recursos hídricos en el territorio nacional, integrando herramientas como Google Earth Engine (GEE) para facilitar el análisis y la toma de decisiones. Estas variables, procesadas a escalas mensuales y espaciales mínimas en Unidades de Respuesta Hidrológica (UHR), fueron calibradas con datos históricos de 1980 a 2020 en escalas 10 X 10 km2 para una representación detallada, fluida y accesible en GEE, permitiendo superposiciones de capas raster o vectoriales y análisis temporales que abordan la escasez de datos en zonas rurales y los impactos del cambio climático (Yates et al., 2005; Gorelick et al., 2017). 
             </p>
+            <p class="text" style="text-align: justify;">
+             La primera fase para la construcción de la aplicación web WEAP_WebAppRepWB, requirió de una estructuración y organización secuencial de las cinco variables (precipitación, temperatura, escorrentía, evapotranspiración real y potencial). En ese orden de ideas, se optó por una estructuración semejante a la creación de Bases de Datos Espaciales (BDE), de acuerdo con los siguientes requerimientos y exigencias técnicas: 
+            </p>
+            <p class="text" style="text-align: justify;">
+              Las secciones subsiguientes de este documento detallan los protocolos de extracción y procesamiento de datos del modelo WEAP ajustado, así como guías paso a paso para la implementación de visualizaciones en GEE, asegurando que la base de datos del BHSB no solo sea descriptiva, sino operativa para informar decisiones estratégicas en el contexto de planes sectoriales relacionados con los recursos hídricos y naturales, así como del Plan de Desarrollo Económico y Social (PDES) del país.
+            </p>
+            <ul>
+                  <li>Resolución temporal: cada variable posee una serie temporal mensual entre 1980 a 2020 (41 años o 492 meses en total).</li>
+                  <li>Resolución espacial: el área y la escala espacial, abarcan coberturas y extensiones nacionales como por ejemplo el país de Bolivia.  </li>
+                  <li>Interoperabilidad y administración: Al igual que en las BDE, se optó por estructurar inicialmente la información en archivos y extensiones comunes como shapefile (.shp), hojas de cálculo de Excel (.xlsx), archivos de texto plano (.txt), entre otros. </li>
+            </ul>
 
         <!-------------------------------------------------------------------------------------------->
         <!--Start Credits-->
