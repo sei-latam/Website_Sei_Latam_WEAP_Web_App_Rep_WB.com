@@ -163,7 +163,36 @@
             </a>
           </div>
         </div>
-            
+
+          
+        <div class="flex-row">   
+          <p class="text text-center graph-title">
+              4) Adición de imágenes por fecha y variable 
+            </p>
+                <p class="text" style="text-align: justify;">
+                Inputs o parámetros:ImageCollections mensuales con sus respectivas bandas según la variable (´temperatura’, ´precipitación’, ‘escorrentía’, ‘etreal’ y ‘etref’). También, se requiere de establecer los valores mínimos (.min) y máximos (.max), diferentes simbologías y paletas de colores (10 intervalos) por cada variable.
+                </p>
+            <p class="text" style="text-align: justify;">
+               Acciones e instrucciones:
+            </p>
+            <ul>
+                  <li>Selector de variable usando ui.Select(): se crea un menu desplegable con las diferentes variables mensuales para que el usuario seleccione una.</li>
+                  <li>Barra deslizante dinámica usando ui.DateSlider(): se crea un componente dinámico que muestra todos los meses y años comprendidos entre 1980 y 2020 para que el usuario seleccione un mes dentro de este intervalo.</li>
+                  <li>Botón para adicionar la imagen mensual seleccionada usando ui.Buttom(): se crea un botón que recibe como parámetro la imagen mensual seleccionada por el usuario.</li>
+                  <li>Creación de la función displayImage_t(): se crea una función que recibe la variable y el mes seleccionado por el usuario, para posteriormente activar el botón ‘Adicionar imagen(es) 🖼’ y enviar la imagen al mapa principal (mapPanel) de la aplicación.</li>
+                  <li>Despliegue de todos los ítems anteriores usando ui.Panel(): una vez creada la consulta, se llaman los paneles panel_sli y chartPanel4, los cuales agregan la selección, la barra deslizante y el botón en la parte visual de la aplicación.</li>
+            </ul>
+                   <p class="text" style="text-align: justify;">
+                Outputs o resultados: Desarrollo de un panel localizado en la parte inferior derecha de la aplicación (justo debajo de las consultas por puntos y polígonos) con la opción de agregar una o más imágenes al mapa principal. 
+        <div class="flex-row-space-between">
+          <div class="flex-item flex-column">
+            <a href="https://github.com/sei-latam/Website_Sei_Latam_WEAP_Web_App_Rep_WB.com/blob/main/img/5QueryTimeSlider.gif" target="_blank" class="image max-width-1000">
+              <img src="img/5QueryTimeSlider.gif">
+            </a>
+          </div>
+        </div>
+
+          
         <!-------------------------------------------------------------------------------------------->
         <!--Start Credits-->
         <div class="flex-row">
