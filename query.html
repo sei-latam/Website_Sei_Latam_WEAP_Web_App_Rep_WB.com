@@ -107,6 +107,34 @@
           </div>
         </div>
 
+               
+        <div class="flex-row">   
+          <p class="text text-center graph-title">
+              3) Series de tiempo por puntos y variables
+            </p>
+                <p class="text" style="text-align: justify;">
+                Inputs o parámetros: ImageCollections mensuales y anuales diferenciadas para cada variable (Tas, Prec, Run, ETReal y ETRef) según las unidades de medida, grados Celsius (°C) para la temperatura y milímetros para las demás variables.
+                </p>
+            <p class="text" style="text-align: justify;">
+               Acciones e instrucciones:
+            </p>
+            <ul>
+                  <li>Cajas de texto para ingresar coordenadas lonInput y latInput usando ui.Textbox(): son creadas dos cajas de texto que reciben las coordenadas ingresadas por el usuario.</li>
+                  <li>Selector de variable usando ui.Select(): se crea un menú desplegable con las variables mensuales y anuales, para luego ser enviada la variable seleccionada como input.</li>
+                  <li>Botón para generar el gráfico ui.Buttom(): botón que activa la creación del punto, la selección de la variable de interés. Al igual que, un gráfico utilizando ui.Chart.image.series()</li>
+                  <li>Gráfico de serie temporal usando ui.Chart.image.series(): gráfico de serie temporal que estima la media utilizando la técnica de reducción ee.Reducer.mean()</li>
+                  <li>Despliegue de todos los ítems anteriores usando ui.Panel(): una vez creada la consulta, se llaman los paneles inputPanel y chartPanel2, los cuales agregan los botones y gráficos de series temporales en la parte visual de la aplicación.</li>
+            </ul>
+                   <p class="text" style="text-align: justify;">
+                Outputs o resultados: Desarrollo de un panel localizado en la parte superior derecha de la aplicación, con la opción de insertar coordenadas (longitud y latitud) en la variable seleccionada. De la misma forma, se crea un botón que le permite al usuario visualizar o plotear las series de tiempo en el punto insertado. El gráfico creado en GEE permite descargar los datos consultados en formato (.csv).
+                </p>
+        <div class="flex-row-space-between">
+          <div class="flex-item flex-column">
+            <a href="https://github.com/sei-latam/Website_Sei_Latam_WEAP_Web_App_Rep_WB.com/blob/main/img/3QueryPoints.gif" target="_blank" class="image max-width-1000">
+              <img src="img/3QueryPoints.gif">
+            </a>
+          </div>
+        </div>
 
 
           
