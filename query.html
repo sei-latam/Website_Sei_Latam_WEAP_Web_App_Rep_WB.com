@@ -236,6 +236,33 @@
           </iframe>
 
 
+
+        
+        <div class="flex-row">   
+          <p class="text text-center graph-title">
+              7) Descarga de imágenes y pos-procesamiento de archivos .csv 
+          </p>
+                <p class="text" style="text-align: justify;">
+                Inputs o parámetros: ImageCollections mensuales con sus respectivas bandas según la variable (´temperatura’, ´precipitación’, ‘escorrentía’, ‘etreal’ y ‘etref’).
+                </p>
+          
+            <p class="text" style="text-align: justify;">
+               Acciones e instrucciones:
+            </p>
+            <ul>
+                  <li>Creación de un nuevo panel usando ui.Panel(): se crea un panel para mostrar diferentes widgets y funciones.</li>
+                  <li>Selector de variable usando ui.Select(): se crea un menú desplegable con las diferentes variables mensuales para que el usuario escoja una.</li>
+                  <li>Cajas de texto para filtrar fechas (inicial y final) usando ui.Textbox(): son creadas dos cajas de texto para que el usuario ingrese fechas siguiendo el formato 'YYYY-MM.DD'.</li>
+                  <li>Creación de la función para descargar imágenes usando ui.Buttom(): se crea un botón que activa el proceso de descarga de las imagenes comprimidas en formato .ZIP </li>
+                  <li>Despliegue de todos los ítems anteriores usando ui.Panel(): una vez creada la consulta, se llama un panel, muestra todos los widgets con los url de las imagenes descargadas</li>
+            </ul>
+                   <p class="text" style="text-align: justify;">
+                Outputs o resultados: Desarrollo de una interfaz localizada en la parte izquierda inferior del panel de descarga de imagenes, el cual le permite al usuario descargar las imagenes según la variable seleccionada. 
+                  </p>
+          
+                   <p class="text" style="text-align: justify;">
+                    Observación Importante: las imagenes .tif comprimidas en formato .ZIP al igual que los archivos .csv con las series de tiempo filtradas por fechas y meses, requieren de un pos-procesamiento adicional para una mejor análisis y comprensión de la información. Por ejemplo, en caso de requerir la realización de histogramas o gráficos multitemporales con valores medios por mes o por cuartiles (Q25, Q50, Q75, etc). Los autores recomiendan el uso de herramientas como excel o R que lean los archivos .csv dentro de los análisis. Por otra parte, en el caso de las imagenes raster .tif los autores recomiendan el uso de software libre como QGIS para una mejor visualización de la información y las imagenes.
+                  </p>
         <!-------------------------------------------------------------------------------------------->
         <!--Start Credits-->
         <div class="flex-row">
