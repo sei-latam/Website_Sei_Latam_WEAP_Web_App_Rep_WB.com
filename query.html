@@ -37,10 +37,8 @@
     </div>
         <!--End Header-->
     <!-------------------------------------------------------------------------------------------->    
-    <!-------------------------------------------------------------------------------------------->
     <div class="content">
       <div class="content-table flex-column">
-        <!-------------------------------------------------------------------------------------------->
         <!-------------------------------------------------------------------------------------------->
         <!--Start Text with Centered Image and Table-->
         <div class="flex-row">
@@ -59,7 +57,7 @@
               1) Selección de Mapas Base.
             </p>
                 <p class="text" style="text-align: justify;">
-                Inputs o parámetros: Librería y repositorio SnazzyMaps en Google Maps JavaScript API para la creación de los mapas base “iconChange”, “baseChange” y “Multibrand”. 
+                Inputs o parámetros: Librería y repositorio SnazzyMaps en Google Maps JavaScript API para la creación de los mapas base “Alta vegetación”, “Baja vegetación” y “Alto contraste”. 
                 </p>
             <p class="text" style="text-align: justify;">
                Acciones e instrucciones:
@@ -71,7 +69,7 @@
                   <li>•	Mapa base Multibrand o alto contraste: Estilo detallado y sofisticado, ideal para branding o visualizaciones temáticas, con etiquetas visibles y colores personalizados (carreteras, paisajes y agua en tonos oscuros). Asimismo, un alto contraste entre texto y fondo.</li>              
             </ul>
                    <p class="text" style="text-align: justify;">
-                Outputs o resultados: Desarrollo de un panel localizado en la parte inferior central con la opción de seleccionar diferentes mapas base: iconChange, baseChange, Multibrand, mapa de relevo y satélite (estos dos últimos configurados por defecto en Google Earth Engine).
+                Outputs o resultados: Desarrollo de un panel localizado en la parte inferior izquierda con la opción de seleccionar diferentes mapas base: Alta vegetación, Baja vegetación, Alto contraste, mapa de relevo y satélite (estos dos últimos configurados por defecto en Google Earth Engine).
                 </p>
         <div class="flex-row-space-between">
           <div class="flex-item flex-column">
@@ -81,83 +79,37 @@
           </div>
         </div>
 
-
-          
-          <div class="flex-row">   
-          <p class="text text-center graph-title">
-              Unión de la información temporal y espacial.
-            </p>
-                <p class="text" style="text-align: justify;">
-                 La unión de la información temporal (series de tiempo) y espacial (área de estudio), se realizó mediante la aplicación de Sistemas de Información Geográfica (SIG) específicamente el software licenciado ArcGIS, utilizando la herramienta ‘spatial join’ para cada una de las cinco variables definidas en el proyecto, obteniendo de esta forma archivos (.shp) y una primera estructuración de los datos.  
-                </p>
-
-            <p class="text text-center graph-title">
-              Creación de imágenes multibanda.
-            </p>
-                <p class="text" style="text-align: justify;">
-                 En una primera instancia, se optó por realizar la exportación de los archivos (.shp) en la plataforma de la nube Google Earth Engine (GEE). Sin embargo, debido a limitaciones establecidas en GEE referentes al tamaño (hasta 2 GB), numero de columnas (hasta 1000) número máximo de vértices por geometría (hasta 100.000 vértices), fue decidido convertir los archivos (.shp) a imágenes multibanda tipo ráster (.tiff o. geotiff) que ocuparan menor espacio y tuvieran una mayor eficiencia en el desarrollo de la aplicación en GEE. De esta forma, se logró importar de forma exitosa las cinco variables que contenían mediciones mensuales de las series temporales entre 1980 a 2020, en donde cada mes de las series fueron remplazadas y enumeradas como bandas ‘b1, b2, b3…. b492’ en las imágenes multibanda.
-                </p>
-
-             <p class="text text-center graph-title">
-              Creación de image collections mensuales y anuales.
-            </p>
-                <p class="text" style="text-align: justify;">
-                 Una vez importadas las imágenes multibanda en GEE, el siguiente paso fue convertir cada una de las imágenes multibanda a estructuras propias de GEE (FeatureCollection, ImageCollection, List, Arrays, etc). En este caso, la estructura escogida fue ImageCollection debido a su capacidad de almacenar y organizar imágenes ráster para diferentes periodos de tiempo (en este caso mensual). Asimismo, es importante mencionar que para el caso de las ImageCollections mensuales, se procedió a renombrar todas las bandas de acuerdo con la variable que pertenece ‘temperatura’, ‘precipitación’, ‘escorrentía’, ‘evapotranspiración’, entre otras. 
-                </p>
-                <p class="text" style="text-align: justify;">
-                 Una vez creadas las ImageCollections mensuales, se crearon ImageCollections anuales tomando en cuenta las siguientes consideraciones por variable: En la variable de temperatura, se calculó la media anual en unidades Celsius (°). Mientras que, para las variables de precipitación, escorrentía, evapotranspiración potencial y real, fueron calculadas las acumulaciones o sumatorias anuales en unidades de milímetros (mm).
-                </p>
-
-
-         <!--Start Text with Centered Image and Table-->
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <h2 id="centered-image-and-table" class="no-top-margin">Desarrollo Front-End y Back-End </h2>
-            <hr>
+            
         <div class="flex-row">   
           <p class="text text-center graph-title">
-              Componente Front-End.
-          </p>
+              2) Selección de variable y actualización de leyenda
+            </p>
+                <p class="text" style="text-align: justify;">
+                Inputs o parámetros: ImageCollections mensuales y anuales diferenciadas para cada variable (Tas, Prec, Run, ETReal y ETRef) con sus respectivos valores mínimos (.min) y máximos (.max). Al igual que, diferentes simbologías y paletas de colores (10 intervalos) según la variable.
+                </p>
+            <p class="text" style="text-align: justify;">
+               Acciones e instrucciones:
+            </p>
+            <ul>
+                  <li>Selector de variable usando ui.Select(): se crea un menú desplegable con las variables mensuales y anuales, luego se llaman las funciones updateMap() y updateLegend() con la variable seleccionada.</li>
+                  <li>Activación de las funciones updateMap() y updateLegend(): la función updateMap() permite adicionar la variable seleccionada al mapa principal (mapPanel), limpiando variables seleccionadas previamente. De la misma forma, la función updateLegend() crea la leyenda según la variable seleccionada con sus respectivos intervalos y valores.</li>
+                  <li>Botón para limpiar la leyenda: se crea un ui.Buttom() que le permite al usuario limpiar la leyenda dentro de la aplicación.</li>
+                  <li>Adición de todos los ítems al panel máster (master_panel) usando ui.Panel(): se hace un llamado al panel máster declarado previamente y se le adicionan los ítems.</li>              
+            </ul>
+                   <p class="text" style="text-align: justify;">
+                Outputs o resultados: Desarrollo de un panel localizado en la parte central izquierda dentro del mapa, con la opción de seleccionar tanto variables mensuales como anuales, con su respectiva legenda, paleta de colores y rangos (mínimos y máximos).
+                </p>
         <div class="flex-row-space-between">
           <div class="flex-item flex-column">
-            <a href="https://github.com/sei-latam/Website_Sei_Latam_WEAP_Web_App_Rep_WB.com/blob/main/img/Front_Design_GEE_WEAP_App.png" target="_blank" class="image max-width-1000">
-              <img src="img/Front_Design_GEE_WEAP_App.png">
+            <a href="https://github.com/sei-latam/Website_Sei_Latam_WEAP_Web_App_Rep_WB.com/blob/main/img/2SelectMonthlyVariable.gif" target="_blank" class="image max-width-1000">
+              <img src="img/2SelectMonthlyVariable.gif">
             </a>
           </div>
         </div>
-           <p class="text" style="text-align: justify;">
-                El componente Front-End utilizado en el desarrollo de aplicaciones web, incorpora la parte visible o arquetipo final, por la cual los usuarios consiguen interactuar, consultar y filtrar de forma intuitiva o simple los datos procesados internamente en el componente BACK-END. En ese orden de ideas, fueron colocados diferentes elementos, interfaces y paneles para la realización de consultas temporales, espaciales y descarga de imágenes.  
-            </p>
+
+
 
           
-          <div class="flex-row">   
-          <p class="text text-center graph-title">
-              Componente Back-End.
-          </p>
-           <p class="text" style="text-align: justify;">
-               El componente Back-End también conocido como componente o fase oculta dentro del desarrollo de aplicaciones web, es quizás la componente más importante y relevante de la aplicación WEAP_WebAppRepWB, ya que durante esta fase de construcción son realizadas las siguientes actividades: 
-            </p>
-            <ul>
-                  <li>Importe y acceso a las ImageCollections mensuales y anuales </li>
-                  <li>Preprocesamiento y automatización de las imágenes  </li>
-                  <li>Creación y configuración de las interfaces, elementos y visualizadores gráficos del componente Front-End </li>
-                  <li>Importe de librerías y extensiones externas para la creación de mapas base y simbologías </li>
-                  <li>Desarrollo de las diferentes consultas, filtros y análisis definidas en el diseño de la aplicación web </li>
-                  <li>Escritura y desarrollo de las diferentes versiones de código utilizadas a través de la API (Interfaz de Programación de Aplicaciones) en Google Earth Engine.  </li>
-            </ul>
-                <p class="text" style="text-align: justify;">
-                 En el caso de la API de Google Earth Engine, esta integra de forma predefinida una serie de accesorios o widgets atraves de interfaces de usuario (UI) , los cuales fueron utilizados en su mayoría y son descritos brevemente a continuación.   
-                </p>
-            <ul>
-                  <li>Mapas ui.map(): Widget interactivo que permite adicionar, modificar o actualizar capas (layouts) de forma dinámica, generalmente a partir de otros widgets como funciones, selección o botones.</li>
-                  <li>Paneles ui.panel(): Widget interactivo que permite adicionar múltiples widgets (botones, funciones, textos, etc.) dentro de un mismo panel, otorgando una mejor distribución en la visualización gráfica de la aplicación.</li>
-                  <li>Botones ui.buttom(): Widget dinámico que permite activar o desactivar a partir de un ‘click’ otros widgets y funcionalidades dentro de la aplicación.</li>
-                  <li>Selección variables ui.select(): Widget dinámico que permite seleccionar una o más variables, para después ser enviadas como parámetros de entrada o inputs a otras funcionalidades o widgets.</li>
-                  <li>Gráficos ui.chart(): Widget dinámico que es activado generalmente dentro de una función, dentro de sus especificaciones requiere la inserción de parámetros tales como: colecciones de variables o capas, escala, tipo de gráfico (líneas, columnas, barras, etc.).</li>
-                  <li>Títulos ui.label(): Widget estático o fijo que se utiliza para imprimir o mostrar textos, frases o instrucciones dentro de la aplicación.</li>
-                  <li>Textos ui.Textbox(): Widget dinámico que recibe únicamente datos tipo string, text o char, entre otros. Su principal uso radica en la inserción de datos tipo fecha ‘YYYY-MM-DD’ o de caracteres.</li>
-                  <li>Reset widgets ui.root.widgets(): Widget que se utiliza generalmente como controlador de todos los widgets utilizados en la aplicación, permitiendo por ejemplo un restablecimiento de la aplicación, así como la ‘eliminación’ de widgets activados previamente por el usuario.</li>                
-            </ul>
             
         <!-------------------------------------------------------------------------------------------->
         <!--Start Credits-->
