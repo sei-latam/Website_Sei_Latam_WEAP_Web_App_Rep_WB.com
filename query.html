@@ -66,10 +66,10 @@
                   <li>Configurar y definir cada uno de los mapas base, buscando personalizar y modificar el estilo visual utilizando los widgets ui.Buttom () y la función onClick (activación o desactivación del mapa base).</li>
                   <li>Mapa base iconChange o alta vegetación: Estilo minimalista con alto contraste, que invierte la luminosidad en el mapa y reduce el brillo general. Además, oculta determinados iconos (puntos de interés, etiquetas, lugares administrativos, etc.). </li>
                   <li>Mapa base baseChange o baja vegetación: Estilo con alto énfasis en elementos naturales (ríos, lagos, lagunas, montañas, cobertura vegetal, etc), invirtiendo la luminosidad y ocultando los mismos iconos que el iconChange</li>
-                  <li>•	Mapa base Multibrand o alto contraste: Estilo detallado y sofisticado, ideal para branding o visualizaciones temáticas, con etiquetas visibles y colores personalizados (carreteras, paisajes y agua en tonos oscuros). Asimismo, un alto contraste entre texto y fondo.</li>              
+                  <li>Mapa base Multibrand o alto contraste: Estilo detallado y sofisticado, ideal para branding o visualizaciones temáticas, con etiquetas visibles y colores personalizados (carreteras, paisajes y agua en tonos oscuros). Asimismo, un alto contraste entre texto y fondo.</li>              
             </ul>
                    <p class="text" style="text-align: justify;">
-                Outputs o resultados: Desarrollo de un panel localizado en la parte inferior izquierda con la opción de seleccionar diferentes mapas base: Alta vegetación, Baja vegetación, Alto contraste, mapa de relevo y satélite (estos dos últimos configurados por defecto en Google Earth Engine).
+                Outputs o resultados: Desarrollo de una interfaz localizada en la parte inferior izquierda del mapa, con la opción de seleccionar diferentes mapas base: Alta vegetación, Baja vegetación, Alto contraste, mapa de relevo y satélite (estos dos últimos configurados por defecto en Google Earth Engine).
                 </p>
         <div class="flex-row-space-between">
           <div class="flex-item flex-column">
@@ -97,7 +97,7 @@
                   <li>Adición de todos los ítems al panel máster (master_panel) usando ui.Panel(): se hace un llamado al panel máster declarado previamente y se le adicionan los ítems.</li>              
             </ul>
                    <p class="text" style="text-align: justify;">
-                Outputs o resultados: Desarrollo de un panel localizado en la parte central izquierda dentro del mapa, con la opción de seleccionar tanto variables mensuales como anuales, con su respectiva legenda, paleta de colores y rangos (mínimos y máximos).
+                Outputs o resultados: Desarrollo de una interfaz localizada en la parte central izquierda dentro del mapa, con la opción de seleccionar tanto variables mensuales como anuales, con su respectiva legenda, paleta de colores y rangos (mínimos y máximos).
                 </p>
         <div class="flex-row-space-between">
           <div class="flex-item flex-column">
@@ -126,7 +126,7 @@
                   <li>Despliegue de todos los ítems anteriores usando ui.Panel(): una vez creada la consulta, se llaman los paneles inputPanel y chartPanel2, los cuales agregan los botones y gráficos de series temporales en la parte visual de la aplicación.</li>
             </ul>
                    <p class="text" style="text-align: justify;">
-                Outputs o resultados: Desarrollo de un panel localizado en la parte superior derecha de la aplicación, con la opción de insertar coordenadas (longitud y latitud) en la variable seleccionada. De la misma forma, se crea un botón que le permite al usuario visualizar o plotear las series de tiempo en el punto insertado. El gráfico creado en GEE permite descargar los datos consultados en formato (.csv).
+                Outputs o resultados: Desarrollo de una interfaz localizada en la parte central del panel de consultas, con la opción de insertar coordenadas (longitud y latitud) en la variable seleccionada. De la misma forma, se crea un botón que le permite al usuario visualizar o plotear las series de tiempo en el punto insertado. El gráfico creado en GEE permite descargar los datos consultados en formato (.csv).
                 </p>
         <div class="flex-row-space-between">
           <div class="flex-item flex-column">
@@ -137,7 +137,32 @@
         </div>
 
 
-          
+        <div class="flex-row">   
+          <p class="text text-center graph-title">
+              4) Series de tiempo dibujando polígonos y seleccionando variables 
+            </p>
+                <p class="text" style="text-align: justify;">
+                Inputs o parámetros: ImageCollections mensuales y anuales con su respectiva banda según la variable (Tas, Prec, Run, ETReal y ETRef).
+                </p>
+            <p class="text" style="text-align: justify;">
+               Acciones e instrucciones:
+            </p>
+            <ul>
+                  <li>Botón para empezar a dibujar un polígono usando ui.Buttom(): se crea un botón que le permite al usuario empezar a dibujar un polígono para luego enviar la ‘geometría’ del polígono a las funciones startDrawin() y drawingTools()</li>
+                  <li>Selector de variable usando ui.Select(): se crea un menú desplegable con las variables mensuales y anuales, para luego ser enviada la variable seleccionada como input.</li>
+                  <li>Botón para crear el gráfico de la serie temporal usando ui.Buttom(): se crea un botón que activa las funciones previas junto con la función plotTimeSeries()</li>
+                  <li>Activación de las funciones startDrawin(), drawingTools() plotTimeSeries(): Una vez el usuario realiza los pasos anteriores, GEE usara startDrawin() y drawingTools() para dibujar el polígono dentro del mapa. Posteriormente, la función plotTimeSeries() recibirá los parámetros (variable y polígono) para la creación del gráfico de serie temporal mediante ui.Chart.image.series()</li>
+                  <li>Despliegue de todos los ítems anteriores usando ui.Panel(): una vez creada la consulta, se llama el panel chartPanel3, el cual agrega visualmente en la aplicación los botones y gráficos de las series temporales.</li>
+            </ul>
+                   <p class="text" style="text-align: justify;">
+                Outputs o resultados: Desarrollo de una interfaz localizada en la parte inferior del panel de consultas (justo debajo de la consulta por puntos y coordenadas) con la opción de dibujar un polígono y una variable. Asimismo, se crea un botón que le permite al usuario visualizar o plotear las series de tiempo en base al polígono dibujado. El gráfico de la serie temporal permite descargar los datos consultados en formato (.csv).
+        <div class="flex-row-space-between">
+          <div class="flex-item flex-column">
+            <a href="https://github.com/sei-latam/Website_Sei_Latam_WEAP_Web_App_Rep_WB.com/blob/main/img/4QueryDraPolygons.gif" target="_blank" class="image max-width-1000">
+              <img src="img/4QueryDraPolygons.gif">
+            </a>
+          </div>
+        </div>
             
         <!-------------------------------------------------------------------------------------------->
         <!--Start Credits-->
