@@ -45,7 +45,7 @@
         <!--Start Text with Centered Image and Table-->
         <div class="flex-row">
           <div class="flex-item flex-column">
-            <h2 id="centered-image-and-table" class="no-top-margin">Paneles de consultas y filtros </h2>
+            <h2 id="centered-image-and-table" class="no-top-margin">Paneles de consultas, descargas y visualización </h2>
             <hr>
         <div class="flex-row-space-between">
           <div class="flex-item flex-column">
@@ -56,21 +56,20 @@
         </div>
         <div class="flex-row">   
           <p class="text text-center graph-title">
-              Definición de la base de datos.
+              1) Selección de Mapas Base.
             </p>
                 <p class="text" style="text-align: justify;">
-                El desarrollo de la base de datos del proyecto, considera una serie de variables hidrológicas claves reportadas en el modelo WEAP ajustado a nivel de UHR, para representar de manera interactiva y espacial las dinámicas de los recursos hídricos en el territorio nacional, integrando herramientas como Google Earth Engine (GEE) para facilitar el análisis y la toma de decisiones. Estas variables, procesadas a escalas mensuales y espaciales mínimas en Unidades de Respuesta Hidrológica (UHR), fueron calibradas con datos históricos de 1980 a 2020 en escalas 10 X 10 km2 para una representación detallada, fluida y accesible en GEE, permitiendo superposiciones de capas raster o vectoriales y análisis temporales que abordan la escasez de datos en zonas rurales y los impactos del cambio climático (Yates et al., 2005; Gorelick et al., 2017). 
+                Inputs o parámetros: Librería y repositorio SnazzyMaps en Google Maps JavaScript API para la creación de los mapas base “iconChange”, “baseChange” y “Multibrand”. 
                 </p>
             <p class="text" style="text-align: justify;">
-             La primera fase para la construcción de la aplicación web WEAP_WebAppRepWB, requirió de una estructuración y organización secuencial de las cinco variables (precipitación, temperatura, escorrentía, evapotranspiración real y potencial). En ese orden de ideas, se optó por una estructuración semejante a la creación de Bases de Datos Espaciales (BDE), de acuerdo con los siguientes requerimientos y exigencias técnicas: 
+               Acciones e instrucciones:
             </p>
             <ul>
-                  <li>Resolución temporal: cada variable posee una serie temporal mensual entre 1980 a 2020 (41 años o 492 meses en total).</li>
-                  <li>Resolución espacial: el área y la escala espacial, abarcan coberturas y extensiones nacionales como por ejemplo el país de Bolivia.  </li>
-                  <li>Interoperabilidad y administración: Al igual que en las BDE, se optó por estructurar inicialmente la información en archivos y extensiones comunes como shapefile (.shp), hojas de cálculo de Excel (.xlsx), archivos de texto plano (.txt), entre otros. </li>
+                  <li>Configurar y definir cada uno de los mapas base, buscando personalizar y modificar el estilo visual utilizando los widgets ui.Buttom () y la función onClick (activación o desactivación del mapa base).</li>
+                  <li>Mapa base iconChange o alta vegetación: Estilo minimalista con alto contraste, que invierte la luminosidad en el mapa y reduce el brillo general. Además, oculta determinados iconos (puntos de interés, etiquetas, lugares administrativos, etc.). </li>
+                  <li>Mapa base baseChange o baja vegetación: Estilo con alto énfasis en elementos naturales (ríos, lagos, lagunas, montañas, cobertura vegetal, etc), invirtiendo la luminosidad y ocultando los mismos iconos que el iconChange</li>
+                  <li>•	Mapa base Multibrand o alto contraste: Estilo detallado y sofisticado, ideal para branding o visualizaciones temáticas, con etiquetas visibles y colores personalizados (carreteras, paisajes y agua en tonos oscuros). Asimismo, un alto contraste entre texto y fondo.</li>              
             </ul>
-
-
           <div class="flex-row">   
           <p class="text text-center graph-title">
               Unión de la información temporal y espacial.
