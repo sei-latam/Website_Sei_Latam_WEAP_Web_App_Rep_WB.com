@@ -84,9 +84,9 @@ Each page section of WEAP_WebAppRepWB Webpage is described below:
 
 ## Contact and Authors [page](https://sei-latam.github.io/Website_Sei_Latam_WEAP_Web_App_Rep_WB.com/contact.html)
 
-Gustavo Ayala, Research Fellow @GustavoAyalaTicona
-Sebastián Palomino, Research Associate @spalominoa
-Carlos Méndez, Research Associate @CarlosMendez1997Sei
+* Gustavo Ayala, Research Fellow @GustavoAyalaTicona
+* Sebastián Palomino, Research Associate @spalominoa
+* Carlos Méndez, Research Associate @CarlosMendez1997Sei
 
 ## Credits and repository of data
 
