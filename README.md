@@ -40,30 +40,46 @@ Webpage built in `GitHub Pages` `HTML` `CSS` `JavaScript` Languages.
 
 Each page section of WEAP_WebAppRepWB Webpage is described below:
 
-## Summary and structure/design
+## Summary and structure/design [page](https://sei-latam.github.io/Website_Sei_Latam_WEAP_Web_App_Rep_WB.com/summary.html)
 
-[Summary page](https://sei-latam.github.io/Website_Sei_Latam_WEAP_Web_App_Rep_WB.com/summary.html)
+* General introduction to the application, with a brief description of the project “Protocols and development processes for accessing surface water balance data in Bolivia.”
 
 ![WEAP_WebAppRepWB_Animations](https://github.com/sei-latam/Website_Sei_Latam_WEAP_Web_App_Rep_WB.com/blob/27ddbe75be038ad87f3ff251043c38627f02dcf7/img/WEAP_WebAppRepWB_Animations.gif)
 
-## Development and structure (Back-End and Front-End)
+## Development and structure (Back-End and Front-End) [page](https://sei-latam.github.io/Website_Sei_Latam_WEAP_Web_App_Rep_WB.com/development.html)
 
-[Development page](https://sei-latam.github.io/Website_Sei_Latam_WEAP_Web_App_Rep_WB.com/development.html)
+### Data structure 
 
+* Database definition
+* Merging of temporal and spatial information.
+* Creation of multispectral images.
+* Creation of monthly and annual image collections.
+ 
 ![WEAP_Bolivia_Flux](https://github.com/sei-latam/Website_Sei_Latam_WEAP_Web_App_Rep_WB.com/blob/3c5d3ca7ff706837b05d400be08103820a948233/img/WEAP_Bolivia_Flux.gif)
+
+### Back-End
+
+* Amount and access to monthly and annual ImageCollections
+* Preprocessing and automation of images
+* Creation and configuration of interfaces, elements, and graphic viewers for the front-end component
+* Import of external libraries and extensions for the creation of base maps and symbologies
+* Development of the different queries, filters, and analyses defined in the web application design
+* Writing and development of the different code versions used through the API (Application Programming Interface) in Google Earth Engine.
+
+### Front-End 
 ![Front_Design_GEE_WEAP_App](https://github.com/sei-latam/Website_Sei_Latam_WEAP_Web_App_Rep_WB.com/blob/3c5d3ca7ff706837b05d400be08103820a948233/img/Front_Design_GEE_WEAP_App.png)
 
-## Queries, filters and data analysis
+## Queries, filters and data analysis [page](https://sei-latam.github.io/Website_Sei_Latam_WEAP_Web_App_Rep_WB.com/query.html)
 
-[Queries and data page](https://sei-latam.github.io/Website_Sei_Latam_WEAP_Web_App_Rep_WB.com/query.html)
+*
 
 [![YouTube Video OlX5Or-l1rQ](https://img.youtube.com/vi/OlX5Or-l1rQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=OlX5Or-l1rQ)
 
 
-
 ## Contact and Authors
 
-[Contac and authors page](https://sei-latam.github.io/Website_Sei_Latam_WEAP_Web_App_Rep_WB.com/contact.html)
+[Contact and authors page](https://sei-latam.github.io/Website_Sei_Latam_WEAP_Web_App_Rep_WB.com/contact.html)
+
 
 ## Credits and repository of data
 
