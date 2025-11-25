@@ -71,7 +71,13 @@ Each page section of WEAP_WebAppRepWB Webpage is described below:
 
 ## Queries, filters and data analysis [page](https://sei-latam.github.io/Website_Sei_Latam_WEAP_Web_App_Rep_WB.com/query.html)
 
-*
+* Base map selection.
+* Variable selection and legend update.
+* Time series by points and variables.
+* Time series drawing polygons and selecting variables.
+* Adding images by date and variable.
+* Importing external files (.Kml, .Shp, .GeoJSON).
+* Downloading images and post-processing .csv files.
 
 [![YouTube Video OlX5Or-l1rQ](https://img.youtube.com/vi/OlX5Or-l1rQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=OlX5Or-l1rQ)
 
