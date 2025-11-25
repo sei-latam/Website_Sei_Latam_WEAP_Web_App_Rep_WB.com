@@ -40,23 +40,23 @@ Webpage built in `GitHub Pages` `HTML` `CSS` `JavaScript` Languages.
 
 Each page section of WEAP_WebAppRepWB Webpage is described below:
 
-!(WEAP_WebAppRepWB_Animations)[https://github.com/sei-latam/Website_Sei_Latam_WEAP_Web_App_Rep_WB.com/blob/27ddbe75be038ad87f3ff251043c38627f02dcf7/img/WEAP_WebAppRepWB_Animations.gif]
-
 ## Summary and structure/design
 
-https://sei-latam.github.io/Website_Sei_Latam_WEAP_Web_App_Rep_WB.com/summary.html
+[Summary page](https://sei-latam.github.io/Website_Sei_Latam_WEAP_Web_App_Rep_WB.com/summary.html)
 
-
+![WEAP_WebAppRepWB_Animations](https://github.com/sei-latam/Website_Sei_Latam_WEAP_Web_App_Rep_WB.com/blob/27ddbe75be038ad87f3ff251043c38627f02dcf7/img/WEAP_WebAppRepWB_Animations.gif)
 
 ## Development and structure (Back-End and Front-End)
 
-https://sei-latam.github.io/Website_Sei_Latam_WEAP_Web_App_Rep_WB.com/development.html
+[Development page](https://sei-latam.github.io/Website_Sei_Latam_WEAP_Web_App_Rep_WB.com/development.html)
 
 ## Queries, filters and data analysis
 
-https://sei-latam.github.io/Website_Sei_Latam_WEAP_Web_App_Rep_WB.com/query.html
+[Queries and data page](https://sei-latam.github.io/Website_Sei_Latam_WEAP_Web_App_Rep_WB.com/query.html)
 
 ## Contact and Authors
+
+
 
 https://sei-latam.github.io/Website_Sei_Latam_WEAP_Web_App_Rep_WB.com/contact.html
 
