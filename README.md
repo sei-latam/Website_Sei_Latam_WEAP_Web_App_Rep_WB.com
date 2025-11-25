@@ -82,10 +82,11 @@ Each page section of WEAP_WebAppRepWB Webpage is described below:
 [![YouTube Video OlX5Or-l1rQ](https://img.youtube.com/vi/OlX5Or-l1rQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=OlX5Or-l1rQ)
 
 
-## Contact and Authors
+## Contact and Authors [page](https://sei-latam.github.io/Website_Sei_Latam_WEAP_Web_App_Rep_WB.com/contact.html)
 
-[Contact and authors page](https://sei-latam.github.io/Website_Sei_Latam_WEAP_Web_App_Rep_WB.com/contact.html)
-
+Gustavo Ayala, Research Fellow @GustavoAyalaTicona
+Sebastián Palomino, Research Associate @spalominoa
+Carlos Méndez, Research Associate @CarlosMendez1997Sei
 
 ## Credits and repository of data
 
