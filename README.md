@@ -40,7 +40,7 @@ Webpage built in `GitHub Pages` `HTML` `CSS` `JavaScript` Languages.
 
 Each page section of WEAP_WebAppRepWB Webpage is described below:
 
-!(design)[https://github.com/sei-latam/Website_Sei_Latam_WEAP_Web_App_Rep_WB.com/blob/27ddbe75be038ad87f3ff251043c38627f02dcf7/img/WEAP_WebAppRepWB_Animations.gif]
+!(WEAP_WebAppRepWB_Animations)[https://github.com/sei-latam/Website_Sei_Latam_WEAP_Web_App_Rep_WB.com/blob/27ddbe75be038ad87f3ff251043c38627f02dcf7/img/WEAP_WebAppRepWB_Animations.gif]
 
 ## Summary and structure/design
 
