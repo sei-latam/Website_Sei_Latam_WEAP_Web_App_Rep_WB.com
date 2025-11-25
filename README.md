@@ -90,7 +90,7 @@ Each page section of WEAP_WebAppRepWB Webpage is described below:
 
 ## Credits and repository of data
 
-The original code, repositories and scripts used in this project, are available at:
+The original code, repositories and scripts used in this project, are available at: [https://earthengine.googlesource.com/users/carlosmendez/ExercicesSEI/+/refs/heads/master/WEAP_WebAppRepWB](https://earthengine.googlesource.com/users/carlosmendez/ExercicesSEI/+/refs/heads/master/WEAP_WebAppRepWB)
 
 # Credits and Intellectual Acknowledgments to the Original Author of the Website 
 
