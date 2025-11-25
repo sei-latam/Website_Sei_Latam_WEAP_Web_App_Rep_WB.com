@@ -50,15 +50,20 @@ Each page section of WEAP_WebAppRepWB Webpage is described below:
 
 [Development page](https://sei-latam.github.io/Website_Sei_Latam_WEAP_Web_App_Rep_WB.com/development.html)
 
+![WEAP_Bolivia_Flux](https://github.com/sei-latam/Website_Sei_Latam_WEAP_Web_App_Rep_WB.com/blob/3c5d3ca7ff706837b05d400be08103820a948233/img/WEAP_Bolivia_Flux.gif)
+![Front_Design_GEE_WEAP_App](https://github.com/sei-latam/Website_Sei_Latam_WEAP_Web_App_Rep_WB.com/blob/3c5d3ca7ff706837b05d400be08103820a948233/img/Front_Design_GEE_WEAP_App.png)
+
 ## Queries, filters and data analysis
 
 [Queries and data page](https://sei-latam.github.io/Website_Sei_Latam_WEAP_Web_App_Rep_WB.com/query.html)
 
+[![YouTube Video OlX5Or-l1rQ](https://img.youtube.com/vi/OlX5Or-l1rQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=OlX5Or-l1rQ)
+
+
+
 ## Contact and Authors
 
-
-
-https://sei-latam.github.io/Website_Sei_Latam_WEAP_Web_App_Rep_WB.com/contact.html
+[Contac and authors page](https://sei-latam.github.io/Website_Sei_Latam_WEAP_Web_App_Rep_WB.com/contact.html)
 
 ## Credits and repository of data
 
