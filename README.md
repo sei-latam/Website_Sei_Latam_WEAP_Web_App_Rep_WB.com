@@ -9,7 +9,7 @@ The official version of the WEAP_WebAppRepWB application is available in a GitHu
  Original Repository
  [https://github.com/sei-latam/WEAP_WebAppRepWB](https://github.com/sei-latam/WEAP_WebAppRepWB)
 
-WEAP_WebAppRepWB Application: [https://ee-carlosmendez.projects.earthengine.app/view/hruwatersei](https://ee-carlosmendez.projects.earthengine.app/view/hruwatersei)
+WEAP_WebAppRepWB Application: [https://ee-carlosmendez.projects.earthengine.app/view/hruwatersei](https://carlosmendezsei.users.earthengine.app/view/hruwatersei)
 
 
 ```html
