@@ -14,7 +14,7 @@ WEAP_WebAppRepWB Application: [https://ee-carlosmendez.projects.earthengine.app/
 
 ```html
 https://github.com/sei-latam/WEAP_WebAppRepWB
-https://ee-carlosmendez.projects.earthengine.app/view/hruwatersei
+https://carlosmendezsei.users.earthengine.app/view/hruwatersei
 ```
 
 # Use and install this repository
